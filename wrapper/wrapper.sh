@@ -6,3 +6,6 @@ openssl enc -aes128 -a -in ./hello.sh -out ./hello.enc -K ${KEY} -iv ${IV}
 cat ./hello.enc
 
 eval "$(openssl enc -aes128 -d -a -in ./hello.enc -K ${KEY} -iv ${IV})"
+
+# clean
+rm -f ./hello.enc
